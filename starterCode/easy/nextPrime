@@ -1,0 +1,37 @@
+// Base file for "Find Next Prime Challenge"
+
+const findNextPrime = p => {
+  // PUT YOUR CODE HERE
+  return -1;
+};
+
+const testFindNextPrime = () => {
+  // DON'T EDIT THIS FUNCTION -- This will run our automatic tests
+  let output = '';
+  if (findNextPrime() !== 2) {
+    output += `Case: No input | Expected: 2 | Actual: ${findNextPrime()}\n`;
+  }
+  if (findNextPrime(2) !== 3) {
+    output += `Case: 2 | Expected: 3 | Actual: ${findNextPrime(2)}\n`;
+  }
+  if (findNextPrime(-1) !== -1) {
+    output += `Case: -1 | Expected: -1 | Actual: ${findNextPrime(-1)}\n`;
+  }
+  if (findNextPrime(13) !== 17) {
+    output += `Case: 13 | Expected: 17 | Actual: ${findNextPrime(13)}\n`;
+  }
+  if (findNextPrime(173) !== 179) {
+    output += `Case: 173 | Expected: 179 | Actual: ${findNextPrime(179)}\n`;
+  }
+
+  if (output === '') {
+    console.log('Congratulations! Your code is working as expected!');
+  } else {
+    const errors = (output.match(/\n/g) || '').length + 1;
+    console.log(`There were ${errors} errors.`);
+    console.log(output);
+  }
+};
+
+// Run tests with:
+testFindNextPrime();
